@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="603.0" prefWidth="827.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PreRegisterStudentFormController">
+   <children>
+      <Label layoutX="343.0" layoutY="6.0" text="Pre Register Students" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="48.0" layoutY="60.0" prefHeight="26.0" prefWidth="328.0" promptText="Name" />
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="450.0" layoutY="60.0" prefHeight="26.0" prefWidth="328.0" promptText="Contact" />
+      <JFXTextField fx:id="txtInstitute" labelFloat="true" layoutX="48.0" layoutY="119.0" prefHeight="26.0" prefWidth="328.0" promptText="Institute" />
+      <JFXComboBox fx:id="cmbBatch" labelFloat="true" layoutX="450.0" layoutY="119.0" prefHeight="26.0" prefWidth="328.0" promptText="Batch" />
+      <TableView fx:id="tblPreRegisterStudent" layoutX="35.0" layoutY="290.0" prefHeight="252.0" prefWidth="759.0">
+        <columns>
+           <TableColumn prefWidth="60.0" text="Id" />
+          <TableColumn prefWidth="142.0" text="Name" />
+            <TableColumn prefWidth="100.0" text="Contact" />
+            <TableColumn prefWidth="100.0" text="Institute" />
+            <TableColumn prefWidth="120.0" text="Batch" />
+            <TableColumn prefWidth="120.0" text="Check In" />
+            <TableColumn prefWidth="120.0" text="Check Out" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton layoutX="48.0" layoutY="170.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #16a085;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="48.0" stroke="TRANSPARENT" strokeType="INSIDE" width="176.0">
+         <fill>
+            <LinearGradient endX="0.01442307692307689" endY="0.5528846153846154" startY="0.22596153846153844">
+               <stops>
+                  <Stop color="#452feb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton layoutX="679.0" layoutY="14.0" onAction="#btnHomeOnAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #f39c12;" text="Home" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="450.0" layoutY="175.0" prefHeight="26.0" prefWidth="176.0" promptText="Nic" />
+      <JFXButton fx:id="btnSaveAsRegistered" layoutX="646.0" layoutY="249.0" onAction="#btnSaveAsRegisteredOnAction" prefHeight="35.0" prefWidth="148.0" style="-fx-background-color: #2980b9;" text="Save As Registered" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtPayment" labelFloat="true" layoutX="632.0" layoutY="175.0" prefHeight="26.0" prefWidth="148.0" promptText="Payment" />
+      <RadioButton fx:id="rbtnPay" layoutX="450.0" layoutY="217.0" mnemonicParsing="false" text="Pay">
+         <toggleGroup>
+            <ToggleGroup fx:id="payment" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbtnPending" layoutX="514.0" layoutY="217.0" mnemonicParsing="false" text="Pending" toggleGroup="$payment">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </RadioButton>
+      <JFXButton layoutX="674.0" layoutY="554.0" onAction="#btnRemoveAllOnAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: red;" text="Remove All" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblCount" layoutX="74.0" layoutY="249.0" prefHeight="36.0" prefWidth="69.0" text="000" textFill="#a80e0e">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="236.0" text="Count" />
+   </children>
+</AnchorPane>

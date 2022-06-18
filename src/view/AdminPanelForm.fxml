@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="root" prefHeight="350.0" prefWidth="586.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminPanelFormController">
+   <children>
+      <Label layoutX="213.0" layoutY="6.0" text="Admin Panel" underline="true" />
+      <JFXTextField fx:id="txtTitle" labelFloat="true" layoutX="48.0" layoutY="58.0" prefHeight="26.0" prefWidth="270.0" promptText="Title" />
+      <JFXDatePicker fx:id="dtpStartingDate" layoutX="48.0" layoutY="121.0" prefHeight="26.0" prefWidth="270.0" promptText="Starting Date">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXDatePicker fx:id="dtpEndDate" layoutX="48.0" layoutY="177.0" prefHeight="26.0" prefWidth="270.0" promptText="End Date">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXButton layoutX="244.0" layoutY="239.0" onAction="#btnSubmitOnAction" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #16a085;" text="Submit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="42.0" layoutY="286.0" onAction="#btnHomeOnAction" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #f39c12;" text="Home" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <ListView fx:id="lstTitles" layoutX="346.0" layoutY="83.0" prefHeight="250.0" prefWidth="226.0" />
+      <Label layoutX="398.0" layoutY="63.0" text="Added Batch Titles" underline="true" />
+   </children>
+</AnchorPane>
